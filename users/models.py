@@ -43,3 +43,7 @@ class User(AbstractUser):
         choices=CURRENCY_CHOICES, max_length=3, blank=True
     )
     superhost = models.BooleanField(default=False)
+
+    # def __str__(self):
+    # return potato
+    # return self.username
