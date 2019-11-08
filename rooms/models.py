@@ -82,7 +82,7 @@ class Room(core_models.TimeStampedModel):
         "users.User", related_name="rooms", on_delete=models.CASCADE)
     room_type = models.ForeignKey(
         "RoomType", on_delete=models.SET_NULL, null=True)
-    amenitied = models.ManyToManyField("Amenity", blank=True)
+    amenities = models.ManyToManyField("Amenity", blank=True)
     facilities = models.ManyToManyField("Facility", blank=True)
     house_rules = models.ManyToManyField("HouseRule", blank=True)
 
